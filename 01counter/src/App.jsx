@@ -11,13 +11,25 @@ function App() {
   const addValue = () => {
     console.log("value added", counter);
     // counter = counter + 1;
-    setCounter(counter + 1)
+    if (counter < 20) {
+
+      setCounter(counter + 1)
+    }
+    else {
+      alert("you can not set counter more than 20 !")
+    }
   }
 
   const removeValue = () => {
     console.log("value removed", counter);
     // counter = counter - 1;
-    setCounter(counter - 1)
+    if (counter > 0) {
+
+      setCounter(counter - 1)
+    }
+    else {
+      alert("you can not set counter less than 0 !")
+    }
   }
 
   return (
